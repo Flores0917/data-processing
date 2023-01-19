@@ -11,10 +11,14 @@ if(queryString.length > 0){
 
 
     urlParams.forEach(function(value, key) {
-        //swaps underscore for space 
+       if(key=="Cart"){//cart
+        alert("Cart Item: " + value);
+       }else{//Shipping Label
+         //swaps underscore for space 
         key = key.split("_").join(" ");
 
         myData += `<p>${key}: ${value}</p>`;
+       }
 
        // console.log(value, key);
     });
