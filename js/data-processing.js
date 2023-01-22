@@ -22,6 +22,8 @@ if(queryString.length > 0){
 
     urlParams.forEach(function(value, key) {
 
+
+
        if(key=="Cart"){//cart
         // alert("Cart Item: " + value);
               
@@ -29,6 +31,7 @@ if(queryString.length > 0){
             case "Widget":
               myCart+= "Widget: $3.99<br>";
               myTotal += 3.99;
+              
             break;
 
             case "Sprocket":
@@ -47,8 +50,9 @@ if(queryString.length > 0){
          key = key.split("_").join(" ");
          
          myData += `<p>${key}: ${value}</p>`;
-       }
 
+       }
+      
        // console.log(value, key);
     });
     
